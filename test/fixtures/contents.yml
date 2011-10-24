@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  page_name: MyString
+  title: MyString
+  body: MyText
+
+two:
+  page_name: MyString
+  title: MyString
+  body: MyText
+
+
+# == Schema Information
+#
+# Table name: contents
+#
+#  id         :integer         primary key
+#  page_name  :string(255)
+#  title      :string(255)
+#  body       :text
+#  created_at :timestamp
+#  updated_at :timestamp
+#
+

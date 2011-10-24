@@ -1,0 +1,44 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>Alliance of People with disAbilities, <%= Time.now.to_date %></title></head><body>
+
+<style><!--
+body { font-family: "Helvetica Neue", Helvetica, Ubuntu, arial, sans-serif; }
+a {color:#569ee0;}
+@media only screen and (max-device-width: 480px) {
+	body { padding: 0px !important; margin: 8px !important }
+	#maintable { width: auto !important }
+	.item { margin-left: 0px !important; margin-right: 0px !important }
+}
+--></style>
+
+<p style="font-size: 15px; text-align: center; margin-bottom: 8px"><a href="http://disabilitypride.heroku.com/" style="color: #1173c7">Subscribe to Alliance of People with disAbilities Jobs here</a>.</p>
+
+<table border="0" cellpadding="0" cellspacing="0" align="center" width="600" id="maintable">
+	<tr bgcolor="#ffffff"><td>
+	  
+		<p style="font-size: 14px; float: right; padding:10px 0 0;"><%= Time.now.strftime("Sent: %B %d %Y") %></p><a href="http://disabilitypride.heroku.com/"><img src="http://disabilitypride.heroku.com/images/logo.png" style="margin-bottom: 10px; border-width: 0px; margin-bottom: -8px" /></a>
+		<p style='line-height:1.0em; clear: right; font-weight: bold; color: #c00; margin-bottom: 4px; padding-top: 4px; border-top: 2px solid #c00; margin-top: 1.5em; font-size: 18px; '>Recent Opportunities</p>
+       <% Job.all.each do |j| %>
+      <div style="display: block; clear: right; margin: 16px 0; line-height:1.4em; font-size: 14px;border-bottom:1px solid #eee;" class="item">
+		  	<div><%= link_to j.title.titleize, "http://disabilitypride.heroku.com/jobs/" + j.id.to_s, :style => "font-weight: bold; font-size: 15px; display: block; margin-bottom: 3px; color:##2e3135;" %></div>
+  		  	<div style="font-size: 13px; line-height: 19px">
+            <p><em>Company:</em> <%= if j.company? then j.company.titleize end%></p>
+            <p><em>Contact Info:</em> <%= if j.contact_name? then j.contact_name.titleize end %>, <%= if j.contact_email? then j.contact_email end %>, <%= if j.contact_phone? then j.contact_phone end %></p>
+            <%= "Skill Level: #{j.skill_level}" if j.skill_level? %>
+            <p>Details: <%= truncate(j.details.gsub(/<\/?[^>]*>/, ""), :length => 350).html_safe %> <%= link_to "Read More", "http://disabilitypride.heroku.com/jobs/" + j.id.to_s %></p>
+    			</div>
+  		  </div>
+	    </div>
+
+      <% end %>
+
+
+	<p style="font-size: 14px; padding: 8px;">
+		You opted in to Alliance of People with disAbilities at <a href="http://disabilitypride.heroku.com/">Alliance of People with disAbilities</a> to get weekly e-mails
+		about local jobs <strong>Reading this as a non-subscriber? <a href="http://disabilitypride.heroku.com/">Click here to subscribe.</a></strong></p>
+		
+		<p style="font-size: 14px; padding: 0px 8px;"><%= link_to "One-Click un-subscribe", "http://disabilitypride.heroku.com/unsubscribe/#{Base64.encode64(@this_user.id.to_s)}" %> or e-mail the list maintainer directly at raymona@disabilitypride.org</p>
+    <p style="font-size: 14px; padding: 0px 8px;">Address: 11410 NE 124th ST, #270, Kirkland WA 98034</p>
+		</td></tr>
+	</table>
+
+</body></html>

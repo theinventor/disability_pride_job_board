@@ -1,0 +1,13 @@
+<%= simple_form_for(@subscriber) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="inputs">
+    <%= f.input :name %>
+    <%= f.input :email %>
+    <%= f.input :activated %>
+  </div>
+
+  <div class="actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

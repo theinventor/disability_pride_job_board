@@ -1,0 +1,395 @@
+/*
+Theme Name: pride
+Theme URI:
+Description:For the Alliance of People with disAbilities Website (Based on Starkers by <a href="http://elliotjaystocks.com/">Elliot Jay Stocks</a> which is based on the famous <a href="http://binarybonsai.com/kubrick/">Kubrick</a> by <a href="http://binarybonsai.com/">Michael Heilemann</a>)
+Version: 0.1
+Author: Erik Richert, Sean Walling, Olga Szemetylo, Susan Tonge
+Author URI:
+*/
+body {
+	margin:0;
+	padding:0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	line-height: 1.25em;
+	background-color:#ADD9F4;
+}
+a{
+	color:#0055A5;
+}
+a:hover{
+        text-decoration:none;
+}
+#container {
+	margin: auto auto 20px auto;
+	width: 906px;
+	background-color: #FFF;
+}
+#header {
+         position:relative;
+	height: 150px;
+	width: 100%;
+	background-image: url(/images/logo.png);
+	background-repeat: no-repeat;
+	position:relative;
+}
+#logo_link  {
+         position:absolute;
+         top:0;
+         left:0;
+         display:inline;
+         width:200px;
+         height:150px;
+         margin:0;
+         padding:0;
+         border: none;
+}
+#container #header h1 {
+	display:block;
+	margin-left:200px;
+	padding-top:10px;
+	color:#0055A5;
+}
+#container #header h2 {
+	margin-left: 350px;
+	color:#A79425;
+	display:block;
+	margin-top:10px;
+}
+#container #footer ul li {
+	display: inline;
+	list-style-type: none;
+	float: left;
+	width: 100px;
+}
+#utility {
+	height: 75px;
+	width: 40%;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	text-align: right;
+}
+#container #header #utility ul {
+	top:0;
+	position:absolute;
+	right:5px;
+	text-align:right;
+	list-style-type:none;
+	margin:0;
+	font-size:.9em;
+}
+#container #header #utility ul li a, #container #header #search a {
+	text-decoration:none;
+	color:#0055A5;
+}
+#container #header #utility ul li a:hover, #container #header #search a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+#searchsubmit{
+color:#0055A5;
+background-color:#FFF;
+border:none;
+font-size:0.95em;
+width:50px;
+margin:0;
+padding:0;
+}
+#searchsubmit:hover{
+	text-decoration:underline;
+	color:#000;
+	cursor:pointer;
+}
+#search {
+	height: 30px;
+	width: 40%;
+	position: absolute;
+	bottom: 0px;
+	right: 5px;
+	text-align: right;
+}
+#topDivider {
+	background-image: url(/images/topDivider.png);
+	height: 25px;
+	width: 100%;
+}
+#mainContent {
+	background-color: #FFF;
+	width: 95%;
+	padding: 0 10px;
+	overflow: hidden;
+}
+#navigation {
+	width: 200px;
+	border-right: 2px solid #0054A4;
+	float:left;
+	display:inline;
+}
+#container #mainContent #navigation ul {
+        width:170px;
+        padding-left:0;
+        padding-top:10px;
+        margin-left:10px;
+}
+#container #mainContent #navigation ul li {
+        list-style-type: none;
+        /*display:block;*/
+        /*height: 30px;*/
+	/*width: 170px;*/
+        /*line-height:30px;*/
+	text-align:center;
+        padding:5px;
+        display:block;
+}
+#container #mainContent #navigation ul li a {
+        display:block;
+        color: #FFF;
+	text-decoration: none;
+        background-color: #0055A5;
+        padding:5px;
+}
+#container #mainContent #navigation ul li ul{
+        width:120px;
+        margin-left:20px;
+}
+#container #mainContent #navigation ul li ul li{
+        list-style-type: none;
+        /*display:block;*/
+        /*height: 30px;*/
+        /*line-height:25px;*/
+	text-align:center;
+        padding:5px;
+        /*width:130px;*/
+}
+#container #mainContent #navigation ul li>ul li>ul li{
+        list-style-type: none;
+        /*display:block;*/
+        /*height: 30px;*/
+	/*width: 120px;*/
+        /*line-height:25px;*/
+	text-align:center;
+        padding:5px;
+}
+#container #mainContent #navigation ul .current_page_item>a{
+        color:#000;
+	background-color:#ADD9F4;
+}
+#container #mainContent #navigation ul li a:hover {
+	color:#000;
+	background-color:#ADD9F4;
+}
+#container #mainContent #navigation ul li ul li a:hover {
+	color:#000;
+	background-color:#ADD9F4;
+}
+#donate {
+	background-color: #FFF;
+	float: left;
+	height: 105px;
+	width: 187px;
+	margin-top:15px;
+}
+
+#facebook {
+	
+	float: left;
+	height: 44px;
+	width: 144px;
+	margin-bottom:15px;
+	margin-left:25px;
+}
+#amazon {
+	
+	float: left;
+	height: 60px;
+	width: 130px;
+	margin-bottom:40px;
+	margin-left:35px;
+}
+
+#container #mainContent #navigation #donate a {
+	background-image: url(/images/donate_edit1.png);
+	height: 99px;
+	width: 147px;
+	float:left;
+	margin-left:25px;
+}
+#container #mainContent #navigation #donate a:hover {
+	background-position:top right;
+}
+#volunteer {
+	background-color: #FFF;
+	float: left;
+	height: 110px;
+	width: 187px;
+	margin-bottom:15px;
+}
+#container #mainContent #navigation #volunteer a {
+	background-image: url(images/volunteer_edit1.png);
+	height: 99px;
+	width: 147px;
+	float:left;
+	margin-left:25px;
+}
+#container #mainContent #navigation #volunteer a:hover {
+	background-position:top right;
+}
+#homeBanner {
+	float: left;
+	height: 230px;
+	width: 670px;
+	/*background-image: url(../img/bannerBack.png);
+	background-repeat: repeat-x;*/
+	margin:0;
+	display:inline;
+}
+#container #mainContent #homeBanner img {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+#homeText {
+	float: left;
+	width: 399px;
+	margin-left: 50px;
+	margin-bottom:40px;
+	display:inline;
+	display:inline;
+        margin-top:30px;
+}
+#container #mainContent #homeText h3, #container #mainContent #homeText h2, #container #mainContent #homeText h3{
+	margin:0 0 1em 0;
+}
+#container #mainContent #homeText h4, #container #mainContent #homeText h5, #container #mainContent #homeText h6 {
+	margin-bottom:-0.5em;
+}
+#homeText h2 a{
+	line-height: 115%;
+	text-decoration:none;
+}
+#homeNews {
+	background-color: #FFF;
+	float: right;
+	width: 199px;
+	border-left: 2px solid #0054A4;
+	margin-bottom:30px;
+	list-style-type:none;
+        margin-top:30px;
+}
+#btmDivider {
+	background-image: url(images/btmDivider.png);
+	height: 25px;
+	width: 100%;
+	float:left;
+}
+#footer {
+	width: 100%;
+	height:110px;
+}
+#container #footer ul {
+	display:inline;
+	float:left;
+	margin:10px 0 0 275px;
+}
+#container #footer ul li a {
+	font-size: 0.9em;
+	color: #000;
+	text-decoration: none;
+	color:#0055A5;
+}
+#container #footer ul li a:hover {
+	text-decoration:underline;
+	color:#000;
+}
+#container #footer table {
+	float: left;
+	margin-left:75px;
+	color: #FFF;
+	background-color: #0055A5;
+	border-bottom:5px solid #ADD9F4;
+	margin-top:10px;
+}
+#container #mainContent #homeNews p.dateStamp {
+	font-size: 0.7em;
+	color: #222;
+	margin-top:-5px;
+	padding-top:0;
+	margin-bottom:-10px;
+}
+#container #mainContent #homeNews p, #container #mainContent #homeNews h4 {
+	padding:10px 10px 0;
+	margin:0;
+}
+#container #mainContent #homeNews p{
+	margin-bottom:20px;
+}
+#newsHeader {
+	color: #FFF;
+	background-color: #666;
+	text-align: left;
+	height: 40px;
+	Line-height:40px;
+	width: 100%;
+	border-left: 2px solid #666;
+	z-index:1000;
+	margin-left:-2px;
+	margin-bottom:20px;
+}
+#container #mainContent #homeNews #newsHeader h4 {
+	margin-top: 0px;
+	padding-top:0;
+}
+/*created 12-02-09*/
+#container #mainContent #homeNews h4 a {
+	color: #000;
+	text-decoration: none;
+}
+#container #mainContent #homeNews a:hover {
+	color:#000;
+	text-decoration: underline;
+}
+/*created 12-02-09*/ 
+#container #header #search input {
+	margin-left: 5px;
+}
+#container #mainContent #homeBanner img {
+	border: 5px solid #333;
+}
+
+/*Styling for individual posts 12/2/09 */
+.post{
+	width:80%;
+	padding:25px 10px 10px 50px;
+}
+.center{
+	text-align:center;
+}
+/*Styling for individual posts 12/2/09 */
+#innerText {
+	float: left;
+	width: 600px;
+	margin-left: 60px;
+	margin-bottom:40px;
+	display:inline;
+}
+#innerText p{
+        /*padding:10px 80px 10px 0;*/
+}
+
+#innerText input, #innerText textarea{
+        background-color:#ddd;
+}
+#homeText .post{
+        padding:0;
+}
+.widgettitle{
+        padding:5px;
+        text-align:center;
+        line-height:1.1em;
+}
+.subscribe{
+        padding:5px;
+}
+.wp-caption-text{
+        font-weight:bold;
+}

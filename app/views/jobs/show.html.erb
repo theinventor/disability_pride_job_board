@@ -1,0 +1,20 @@
+<div class="jobs-detail column-row">
+  <div class="column twelve">
+    <h2><%= @job.title %> <span class="small">posted: <strong><%= distance_of_time_in_words(@job.created_at, Time.now) %> ago</strong></span></h2>
+  </div>
+  <div class="column five">
+    <p><span>Skill Level:</span><%= if @job.skill_level? then @job.skill_level else "None Given" end %></p>
+    <p><span>Location:</span><%= if @job.location? then @job.location.titleize else "None Given" end %></p>
+    <p><span>Company:</span><%= if @job.company? then @job.company.titleize else "None Given" end %></p>
+    <p><span>Pay Estimate:</span><%= if @job.pay_estimate? then @job.pay_estimate else "None Given" end %></p>
+    <p><span>Details:</span><%=@job.job_attributes.map(&:name).to_sentence.html_safe %></p>
+    <p><span>Contact:</span><%= if @job.contact_email == "NA@SeeDescription.co" then "See Description" else @job.contact_email end %></p>
+    <p><span>Link:</span><%= link_to truncate(@job.link, :length => 25), @job.link %></p>
+
+    <%= link_to 'Back', jobs_path, :class => "pad-top" %>
+  </div>
+  <div class="column seven">
+    <%= @job.details.html_safe %>
+  </div>
+
+</div>

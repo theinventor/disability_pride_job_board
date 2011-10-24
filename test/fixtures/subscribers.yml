@@ -1,0 +1,25 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  email: MyString
+  activated: false
+
+two:
+  name: MyString
+  email: MyString
+  activated: false
+
+
+# == Schema Information
+#
+# Table name: subscribers
+#
+#  id         :integer         primary key
+#  name       :string(255)
+#  email      :string(255)
+#  activated  :boolean
+#  created_at :timestamp
+#  updated_at :timestamp
+#
+

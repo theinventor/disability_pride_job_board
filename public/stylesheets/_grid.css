@@ -1,0 +1,134 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* --------------------------------------------------
+Container
+-------------------------------------------------- */
+div#container, div.container { position: relative; width: 980px; margin: 0 auto; padding: 0; }
+ 
+ 
+/* --------------------------------------------------
+Grid
+-------------------------------------------------- */
+.column-row, .row { margin: 0 0 18px -20px; }
+.row-wide {margin: 0 0 18px -50px; }
+.column, .columns { float: left; display: inline; margin: 0 0 0 20px; }
+.column-wide { float: left; display: inline; margin: 0 0 0 50px; }
+ 
+.one { width: 60px; }
+.two { width: 140px; }
+.three { width: 220px; }
+.four { width: 300px; }
+.five { width: 380px; }
+.six { width: 460px; }
+.seven { width: 540px; }
+.eight { width: 620px; }
+.nine { width: 700px; }
+.ten { width: 780px; }
+.eleven { width: 860px; }
+.twelve { width: 940px; }
+
+.row-wide .one-third {width:270px}
+.row-wide .two-third {width:590px}
+.half {width:460px}
+
+.offset-by-one-half { margin-left: 40px; }
+.offset-by-one { margin-left: 80px; }
+.offset-by-two { margin-left: 160px; }
+.offset-by-three { margin-left: 240px; }
+.offset-by-four { margin-left: 320px; }
+.offset-by-five { margin-left: 400px; }
+.offset-by-six { margin-left: 480px; }
+.offset-by-seven { margin-left: 560px; }
+.offset-by-eight { margin-left: 640px; }
+.offset-by-nine { margin-left: 720px; }
+.offset-by-ten { margin-left: 800px; }
+.offset-by-eleven { margin-left: 880px; }
+
+ 
+/* Clear the columns automagically, thanks @kneath */
+.column-row:after, .row:after, .clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+* html .column-row, * html .row, * html .clearfix { height: 1%; }
+.column-row, .row, .clearfix { display: inline-block; }
+.column-row, .row, .clearfix { display: block; }
+ 
+/* IE6 Problems ---------- */
+body.ie .column-row { width: 960px; }
+body.ie .eight .column-row { width: 640px; }
+body.ie .nine .column-row { width: 720px; }
+body.ie .ten .column-row { width: 800px; }
+body.ie .eleven .column-row { width: 880px; }
+body.ie .twelve .column-row { width: 960px; }
+body.ie .two-thirds .column-row { width: 660px; }
+
+
+.last {margin-left: 0 !important;}
+.marg-top { margin-top:20px !important;}
+.marg-bot { margin-bottom:20px !important;}
+.pad-top { padding-top:20px !important;}
+.pad-top-big { padding-top:50px !important;}
+.pad-top-half { padding-top:10px !important;}
+.pad-bot { padding-bottom:20px !important;}
+.pad-bot-big { padding-bottom:50px !important;}
+.pad-bot-half { padding-bottom:10px !important;}
+.pad-left {padding-left:20px !important;}
+.pad-right-big {padding-right:50px !important;}
+.inpad {padding:12px;}
+.left {float:left;}
+.right {float:right;}
+.center {text-align:center !important;}
+.text-left {text-align:left;}
+.text-right {text-align:right;}
+.text-center {text-align:center;}
+.alignleft {float:left;padding:0 20px 10px 0;}
+.alignright {float:right;padding:0 0 10px 20px;}
+.hide {display:none;}
+.hide-now {display:none !important;}
+.clearfix {clear:both !important;}
+.font-big {font-size:110%;}

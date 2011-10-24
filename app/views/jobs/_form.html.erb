@@ -1,0 +1,29 @@
+<%= simple_form_for @job do |f| %>
+  <div class="column-row">
+    <div class="column five offset-by-one">
+      <%= f.input :title %>
+      <%= f.input :company %>
+      <%= f.input :location %>
+      <%= f.input :skill_level, :collection => ["Junior", "Intermediate", "Senior", "Other"], :prompt => "All" %>
+      <%= f.input :pay_estimate %>
+      
+      <%=f.association :job_attributes, :as => :check_boxes, :label => "Check all that apply" %>
+
+    </div>
+    <div class="column five offset-by-one">
+      <%= f.input :contact_name %>
+      <%= f.input :contact_email %>
+      <%= f.input :contact_title %>
+      <%= f.input :contact_phone %>
+      <%= f.submit button %>
+
+    </div>
+  </div>
+  <div class="column-row">
+    <div class="form_bottom column offset-by-one">
+      <%= f.input :details, :required => false, :input_html => {  :cols => 120, :class => "ckeditor" } %>
+
+    </div>
+
+  </div>
+<% end %>

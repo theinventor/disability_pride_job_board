@@ -1,0 +1,31 @@
+<div id="welcome" class="text-center column twelve pad-bot-big pad-top">
+  <h2><em>Welcome to the Career Board<br>
+Compiled by the Alliance of People with disAbilities</em></h2>
+ <p>&nbsp;</p>
+<p>If you have a disability and are interested in exploring employment in<br>
+a wide variety of fields, take a look at the list and sign up for our <br>
+    weekly email list of new opportunities. <%= link_to "Questions?", "http://disabilitypride.org/wordpress/?page_id=75" %></p>
+</div>
+<div class="column-row">
+  <div class="signup_form column six">
+    <%= simple_form_for(@subscriber) do |f| %>
+    <%= f.error_notification %>
+    <div class="inputs">
+      <%= f.input :email, :label => "If you want us to email you job listings, put your email here." %>
+    </div>
+    <div class="actions right">
+      <%= f.submit 'Sign Up' %>
+    </div>
+    <div class="text-center">
+        <h4><em>Opportunities are sent to you once a week.</em></h4>
+    </div>
+  <% end %>
+  </div>
+  <div class="column five offset-by-one">
+    <p>Do you know of a job that we can share with our community?  <%= link_to "Post it here.", "/jobs" %></p>
+    <p>This service is provided by the Alliance of People with disAbilities. Questions please see our <%= link_to "FAQ", "/faq" %>.</p>
+    <%if @sub_count > 50 then %>
+    <p>This list currently emails <%= @sub_count %> highly interested people every week.</p>
+        <% end %>
+  </div>
+</div>

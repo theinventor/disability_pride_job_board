@@ -1,0 +1,50 @@
+<div class="column-row">
+  <div class="column twelve">
+    <% if @jobs.nil? %>
+        <h1 class="left">You have no current job postings</h1>
+
+    <% else %>
+        <h1 class="left">Your current job postings</h1>
+    <% end %>
+    <p class="pad-top-half right"><%= link_to 'Post a new Job', new_job_path, :class => "button" %></p>
+  </div>
+</div>
+
+<div class="column-row">
+  <div class="column twelve">  
+    <% if not @jobs.nil? %>
+        <div class="jobs">
+          <table>
+            <thead>
+            <tr>
+              <th class="title four">Title</th>
+              <th class="location three">Location</th>
+              <th class="posted two last">Posted</th>
+              <th class="posted two last"></th>
+              <th class="posted two last"></th>
+            </tr>
+            </thead>
+            <tbody>
+            <% @jobs.each do |job| %>
+                <tr>
+                  <td><%= link_to job.title, job_path(job.id) %></td>
+                  <td><%= job.location %></td>
+
+                  <td><%= job.created_at.to_date %></td>
+                  <td><%= link_to 'Edit', edit_job_path(job) %></td>
+                  <td><% if job.disabled == true then %>
+                        Disabled
+                    <% else %>
+                        <%= link_to 'X', job, :confirm => 'Are you sure?', :method => :delete %>
+                    <% end %>
+                  </td>
+                </tr>
+            <% end %>
+            </tbody>
+          </table>
+          <div class="table-bottom"> </div>
+        </div>
+    <% end %>
+  </div>
+</div>
+

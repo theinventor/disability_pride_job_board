@@ -1,0 +1,30 @@
+<h1>Listing jobs</h1>
+
+<div class="jobs">
+  <table>
+    <thead>
+       <tr>
+          <th class="title four">Title</th>
+          <th class="location three">Location</th>
+          <th class="details three">Details</th>
+          <th class="posted two last">Posted</th>
+        </tr>
+    </thead>
+   <tbody>
+      <% @jobs.each do |job| %>
+           <tr class="<%= cycle("even", "odd")%>">
+             <td><strong><%= link_to job.title, job_path(job.id) %></strong></td>
+             <td><%= if job.location? then job.location.titleize else "None Given" end  %></td>
+             <td>
+               <% details = [job.skill_level, job.job_attributes.map(&:name)].delete_if(&:blank?).uniq.flatten %>
+               <%=details.map {|detail| "<span>#{detail}</span>" }.to_sentence.html_safe %>
+             </td>
+             <td><%= distance_of_time_in_words(job.created_at, Time.now) %> ago</td>
+           </tr>
+       <% end %>
+   </tbody>
+  </table>
+  <div class="table-bottom"> </div>
+</div>
+
+<br />

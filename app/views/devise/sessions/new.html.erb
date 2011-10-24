@@ -1,0 +1,17 @@
+<div class="column-row">
+  <div class="column five offset-by-four">
+    <h2>Sign in</h2>
+    <%= simple_form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+      <%= f.input :email %>
+      <%= f.input :password %>
+
+      <% if devise_mapping.rememberable? -%>
+        <%= f.input :remember_me, :as => :boolean %>
+      <% end -%>
+
+      <%= f.submit "Sign in", :class => "right" %>
+    <% end %>
+
+    <%= render :partial => "devise/shared/links" %>
+  </div>
+</div>

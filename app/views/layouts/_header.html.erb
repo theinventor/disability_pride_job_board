@@ -1,0 +1,18 @@
+<header class="pad-bot-big">
+  <%=  link_to logo_beta, root_path %>
+  <div class="nav" style="float: left; padding: 5px 0 30px 0; display: block;">
+
+      <a href="/all_jobs" class="<%= if request.fullpath == "/all_jobs" then "nav-selected" end %>">The Jobs</a>
+      <a href="/jobs" class="<%= if request.fullpath == "/jobs" then "nav-selected" end %>">Post a Job</a>
+
+      <% if user_signed_in? %>
+          <a href="/users/edit" class="<%= if request.fullpath == "/users/edit" then "nav-selected" end %>">My Account</a>
+          <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+          <%= link_to "Sign In", new_user_session_path %>
+      <% end %>
+      
+      <a href="/faq" class="<%= if request.fullpath == "/faq" then "nav-selected" end %>">FAQ</a>
+
+  </div>
+</header>

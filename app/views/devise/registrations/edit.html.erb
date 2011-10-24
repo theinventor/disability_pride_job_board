@@ -1,0 +1,22 @@
+<div class="column-row">
+  <div class="column five offset-by-four">
+    <h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+    <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
+      <%= devise_error_messages! %>
+
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :password_confirmation %>
+      <%= f.input :current_password %>
+      <%= f.input :no_email, :as => :boolean %>
+      <%= f.submit "Update" %>
+    <% end %>
+
+    <h3>Cancel my account</h3>
+
+    <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), :confirm => "Are you sure?", :method => :delete %>.</p>
+
+    <%= link_to "Back", :back %>
+  </div>
+</div>
